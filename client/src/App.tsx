@@ -4,9 +4,16 @@ import FoodLog from './pages/FoodLog'
 import ActivityLog from './pages/ActivityLog'
 import Profile from './pages/Profile'
 import Dashboard from './pages/Dashboard'
+import Login from './pages/Login'
+import { useAppContext } from './context/AppContext'
 
 
 const App = () => {
+  const {user, isUserFetched, onboardingCompleted} = useAppContext();
+  
+  if(!user){
+    return isUserFetched ? <Login/> : <p>Loading  </p>
+  }
   return (
     <>
       <Routes>
