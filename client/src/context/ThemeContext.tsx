@@ -11,7 +11,8 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export function ThemeProvider({children}: {children: React.ReactNode}){
 
 
-    const [theme, setTheme] = useState(()=>localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)")
+    const [theme, setTheme] = useState(()=>localStorage.getItem('theme') ||
+     (window.matchMedia("(prefers-color-scheme: dark)")
     .matches ? "dark" : "light"));
 
     //Update theme when state changes
@@ -29,8 +30,7 @@ export function ThemeProvider({children}: {children: React.ReactNode}){
 
 
      return <ThemeContext.Provider value= {{theme, toggleTheme}}>
-
-
+        {children}
      </ThemeContext.Provider>
 }
 
