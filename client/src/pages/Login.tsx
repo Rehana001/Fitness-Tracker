@@ -2,6 +2,7 @@ import { AtSignIcon, MailIcon, LockIcon, EyeOffIcon, EyeIcon } from "lucide-reac
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
+import { Toaster } from "react-hot-toast";
 
 const Login = () => {
   const [state, setState] = useState('login');
@@ -33,6 +34,8 @@ const Login = () => {
 
 
   return (
+    <>
+    <Toaster/>
     <main className="login-page-container bg-slate-950">
       <form onSubmit={handleSubmit} className="login-form">
         <h2 className="text-3xl font-medium text-white">
@@ -120,6 +123,7 @@ const Login = () => {
         )}
       </form>
     </main>
+    </>
   );
 };
 
