@@ -21,7 +21,7 @@ body {
 }
 
 .layout-container {
-  @apply min-h-screen lg:max-h-screen lg:flex bg-white dark:bg-slate-950 transition-colors duration-200;
+  @apply min-h-screen lg:max-h-screen lg:flex bg-slate-950 text-white transition-colors duration-200;
 }
 
 .page-content-grid {
