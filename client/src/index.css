@@ -7,7 +7,7 @@
 }
 
 body {
-  @apply min-h-screen bg-slate-950 text-white;
+  @apply min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-white transition-colors duration-200;
 }
 
 
@@ -21,7 +21,7 @@ body {
 }
 
 .layout-container {
-  @apply min-h-screen lg:max-h-screen lg:flex bg-slate-950 text-white transition-colors duration-200;
+  @apply min-h-screen lg:max-h-screen lg:flex bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-white transition-colors duration-200;
 }
 
 .page-content-grid {
@@ -30,7 +30,7 @@ body {
 
 /* Login Page */
 .login-page-container {
-  @apply flex items-center justify-center w-full h-screen px-4 bg-slate-950 transition-colors duration-200;
+  @apply flex items-center justify-center w-full h-screen px-4 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-200;
 }
 
 .login-form {
@@ -38,7 +38,7 @@ body {
 }
 
 .login-input {
-  @apply w-full rounded-md border border-slate-700 bg-slate-900 py-4 pl-12 pr-4 text-white placeholder-slate-400 outline-none transition-all duration-200 focus:border-slate-500 focus:ring-2 focus:ring-slate-700;
+  @apply w-full rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 py-4 pl-12 pr-4 text-slate-900 dark:text-white placeholder-slate-400 outline-none transition-all duration-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 dark:focus:border-slate-500 dark:focus:ring-slate-700;
 }
 
 .login-button {
@@ -79,7 +79,7 @@ body {
 
 /* Onboarding Page */
 .onboarding-container {
-  @apply min-h-screen bg-linear-to-b from-slate-900 to-slate-950 flex flex-col transition-colors duration-200;
+  @apply min-h-screen bg-linear-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950 flex flex-col text-slate-900 dark:text-white transition-colors duration-200;
 }
 
 .onboarding-wrapper {

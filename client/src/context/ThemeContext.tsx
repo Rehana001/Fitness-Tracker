@@ -2,7 +2,7 @@ import {createContext, useState, useEffect, useContext} from 'react'
 
 
 interface ThemeContextType {
-    theme:String;
+    theme: 'light' | 'dark';
     toggleTheme : () => void;
 }
 
@@ -11,9 +11,10 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export function ThemeProvider({children}: {children: React.ReactNode}){
 
 
-    const [theme, setTheme] = useState(()=>localStorage.getItem('theme') ||
-     (window.matchMedia("(prefers-color-scheme: dark)")
-    .matches ? "dark" : "light"));
+    const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+        const savedTheme = localStorage.getItem('theme');
+        return savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : 'light';
+    });
 
     //Update theme when state changes
     useEffect(()=>{

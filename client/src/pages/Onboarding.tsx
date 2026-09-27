@@ -63,9 +63,9 @@ const Onboarding = () => {
             <div className="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center">
               <PersonStanding className="w-6 h-6 text-white" />
             </div>
-            <h1 className="text-2xl font-bold text-white">FitTrack</h1>
+            <h1 className="text-2xl font-bold text-slate-800 dark:text-white">FitTrack</h1>
           </div>
-          <p className="text-slate-400 mt-4">Let's Personalize your experience!</p>
+          <p className="text-slate-600 dark:text-slate-400 mt-4">Let's Personalize your experience!</p>
         </div>
 
         {/*Progress indicator */}
@@ -76,7 +76,7 @@ const Onboarding = () => {
                 "bg-slate-200 dark:bg-slate-800"}`} />
             ))}
           </div>
-          <p className="text-sm text-slate-400 mt-3 ">Step {step} of {totalSteps}</p>
+          <p className="text-sm text-slate-600 dark:text-slate-400 mt-3 ">Step {step} of {totalSteps}</p>
         </div>
 
         {/*Form content*/}
@@ -180,7 +180,7 @@ const Onboarding = () => {
 
               {/*Daily Targets */}
               <div className = "space-y-8 max-w-lg">
-                <h3 className = "text-md font-medium text-white mb-4">
+                <h3 className = "text-md font-medium text-slate-900 dark:text-white mb-4">
                   Daily Targets</h3>
                   <div className="space-y-6">
 
